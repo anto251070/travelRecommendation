@@ -1,0 +1,182 @@
+
+
+/* Modern Travel Navigation Styles */
+ 
+/* 1. Global Reset - Remove font-family from here! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add this to set your font safely */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fab, .fas, .fa-brands, .fa-solid {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", sans-serif !important;
+}
+
+
+nav {
+    background-color: #2c3e50; /* Deep charcoal for a professional look */
+    padding: 15px 5%; /* Horizontal padding uses % for better responsiveness */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Using flex instead of inline for easier alignment */
+    gap: 25px; /* Modern way to add spacing between items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1; /* Off-white for high contrast */
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease; /* Smooth color change and movement */
+    position: relative;
+}
+
+/* Subtle underline animation on hover */
+nav a:hover {
+    color: #1abc9c; /* Teal/Turquoise travel vibe */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #1abc9c;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Styling for the Search Container */
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+#searchInput {
+    padding: 8px 15px;
+    border-radius: 20px; /* Rounded pill shape */
+    border: none;
+    outline: none;
+}
+
+#btnSearch, #btnReset {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+#btnSearch {
+    background-color: #1abc9c;
+    color: white;
+}
+
+#btnReset {
+    background-color: #e74c3c; /* Red for reset */
+    color: white;
+}
+
+#btnSearch:hover, #btnReset:hover {
+    opacity: 0.8;
+}
+
+/* background image */
+
+
+.hero-section {
+    /* Replace 'travel-bg.jpg' with your actual image path */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('travel-bg.jpg');
+    height: 80vh; /* Covers 80% of the viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Keep your existing .hero-section code, but add this for sub-pages */
+.hero-sub {
+    height: 40vh; /* Shorter than the home page (which was 80vh) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('travel-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+/* 2. Set Typography on the Body instead */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Ensures icons have a background to contrast against */
+}
+
+/* 3. Force Social Icon Visibility */
+.social-icons {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50; /* Matches your nav for consistency */
+}
+
+.social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* The 'i' tag needs to be targeted specifically to bypass any font overrides */
+.social-icons a i {
+    font-family: "Font Awesome 6 Brands" !important; /* Forces the icon font back */
+    color: #ffffff !important; /* Visible white by default */
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* 4. Hover States */
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.social-icons a:hover .fa-facebook { color: #1877F2 !important; }
+.social-icons a:hover .fa-twitter { color: #1DA1F2 !important; }
+.social-icons a:hover .fa-instagram { color: #E4405F !important; }
+.social-icons a:hover .fa-youtube { color: #FF0000 !important; }
