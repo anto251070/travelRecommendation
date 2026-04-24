@@ -180,3 +180,51 @@ body {
 .social-icons a:hover .fa-twitter { color: #1DA1F2 !important; }
 .social-icons a:hover .fa-instagram { color: #E4405F !important; }
 .social-icons a:hover .fa-youtube { color: #FF0000 !important; }
+
+
+/* Container for the search results */
+#resultContainer {
+    display: grid;
+    /* This creates a flexible grid where items take up equal space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 40px 5%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Individual Result Cards */
+.result-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.result-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image distortion */
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
